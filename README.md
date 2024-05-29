@@ -98,5 +98,12 @@ fine_tune_gpt2("chatA", "C:\multim\\textbot.py", "chatA")
 fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
 
 
+Для обучения телеграмма используется такая комбинация. 
 
+fine_tune_gpt2("chatA", "C:\multim\\result.json", "chatA") #telegram messages
+shuffle_jsonl(r'C:\multim\fixed_data3.jsonl', 'fixed_data3.jsonl')
+fine_tune_gpt2("chatA", "C:\multim\\fixed_data3.jsonl", "chatA")
+
+Секрет такого обучения в том, чтобы не обучать несколько эпох матекриалы, а лучше их случайно перемешивать, чтобы набор данных был разнобразее.
+В конце желательно добавлять fixed_data3.jsonl, потому что там этот датасет задает формат ввода запрос-ответ и форматирование применяет.
 
