@@ -1,0 +1,13 @@
+chatA/
+chatB/
+content/
+wandb/
+transformers/
+trainsets/
+ruchat/
+env/
+trainsets/
+__pycache__/
+result.json
+cached_lm_GPT2Tokenizer_256_result.json
+cached_lm_GPT2Tokenizer_128_result.json
