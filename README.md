@@ -8,7 +8,11 @@ AGI AI features:
 ![image](https://github.com/h1p3m/agi/assets/58417978/ddcca318-e6eb-4c46-af47-5f83d39e082e)
 ![image](https://github.com/h1p3m/agi/assets/58417978/eadce587-15c7-46fb-be34-be462882752d)  
 * При размере как гпт2 имеет контекст(временную память) в несколько раз больше, при этом самостоятельно кодирует контекст и не теряет смысла после долгих разговоров (иногда может показаться, что теряет, но это системная инфа просто), что позволяет обучаться на временной памяти. В разработке ✅
+  
 ![image](https://github.com/h1p3m/agi/assets/58417978/417dcbf7-e1ec-46fc-ba7c-62388a93f18f)
+![image](https://github.com/h1p3m/agi/assets/58417978/876ffc49-e0e6-4507-acfa-3eb6225cc2c0)
+
+
 * Имеет концепт времени и нахождения в нем. ✅
 * Плохо ориентируется в математике, поэтому не может дать точный числовой ответ ❌
 
@@ -68,7 +72,30 @@ sociation.org.tsv(2)
 Не знаю насколько это было эффективно, я не стал замерять, но какие-то результаты я все-таки получил.
 Дальше надо было найти датасет для "изображения" диалога, так называемый, chat датасет.
 В русскоязычном сегменте ничего мне не попалось, либо было в совсем сложных форматах, с которыми долго разбираться (я облазил весь huggingface), поэтому я нашел подобный датасет, но с другим форматированием (ru_instruct_gpt4.jsonl).
-В файле fix_dataset.py показано как, это должно привести к улучшению форматированием и его большей устойчивости, удалил мусор.
+В файле fix_dataset.py показано как, это должно привести к улучшению форматированием и его большей устойчивости, удалить мусор.
+Изначально у меня не было всех кратких эссе с выжимкой по разным сферам, но на текущий момент эта последовательность актуальна.
+
+fine_tune_gpt2("chatA", "C:\multim\\player.txt", "chatA")
+fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
+fine_tune_gpt2("chatA", "C:\multim\\12asp_chem.txt", "chatA")
+fine_tune_gpt2("chatA", "C:\multim\\physics.txt", "chatA")
+fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
+fine_tune_gpt2("chatA", "C:\multim\\player.txt", "chatA")
+
+fine_tune_gpt2("chatA", "C:\multim\\pythoncoding.txt", "chatA")
+fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
+
+
+fine_tune_gpt2("chatA", "C:\multim\\poetry.txt", "chatA")
+#fine_tune_gpt2("chatA", "C:\multim\\textbot.py", "chatA")
+
+
+shuffle_jsonl(r'C:\multim\fixed_data3.jsonl', 'fixed_data3.jsonl')
+
+fine_tune_gpt2("chatA", "C:\multim\\fixed_data3.jsonl", "chatA")
+
+fine_tune_gpt2("chatA", "C:\multim\\textbot.py", "chatA")
+fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
 
 
 
