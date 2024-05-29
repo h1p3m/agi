@@ -7,8 +7,16 @@ trainsets/
 ruchat/
 env/
 trainsets/
+checkpoints/
 __pycache__/
 result.json
 cached_lm_GPT2Tokenizer_256_result.json
 cached_lm_GPT2Tokenizer_128_result.json
 alpaca_balanced.jsonl
+captiongpt.py
+captiongpt2.py
+captions.py
+alpaca_balanced.jsonl
+ru_instruct_gpt4.jsonl
+train-00000-of-00001-1e0730f8da28d991.parquet
+cached_lm*.txt

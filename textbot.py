@@ -160,7 +160,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         filetext= inspect.getsource(inspect.getmodule(inspect.currentframe()))
         filetext=str(filetext)
         timenow=strftime("%Y-%m-%d %H:%M:%S", gmtime())
-        text = (f"""time:
+        text = (f"""date:
 {timenow},
 прошлое, контекст: {past}
 input:
@@ -284,7 +284,7 @@ output:
         print("memory answer")
         print(optimal_answer)
 
-        await update.message.reply_text(optimal_answer)
+        #await update.message.reply_text(optimal_answer)
     else:
         # Ignore other types of tempmemory
         pass

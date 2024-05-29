@@ -88,12 +88,15 @@ def shuffle_jsonl(input_file, output_file=None):
 # fine_tune_gpt2("chatA", "C:\multim\\fixed_data3.jsonl", "chatA")
 
 
+
+
 fine_tune_gpt2("chatA", "C:\multim\\player.txt", "chatA")
-fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
+shuffle_jsonl(r'C:\multim\fixed_data3.jsonl', 'fixed_data3.jsonl')
+
 fine_tune_gpt2("chatA", "C:\multim\\12asp_chem.txt", "chatA")
 fine_tune_gpt2("chatA", "C:\multim\\physics.txt", "chatA")
 fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
-fine_tune_gpt2("chatA", "C:\multim\\player.txt", "chatA")
+
 
 fine_tune_gpt2("chatA", "C:\multim\\pythoncoding.txt", "chatA")
 fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
@@ -103,13 +106,10 @@ fine_tune_gpt2("chatA", "C:\multim\\poetry.txt", "chatA")
 #fine_tune_gpt2("chatA", "C:\multim\\textbot.py", "chatA")
 
 
-shuffle_jsonl(r'C:\multim\fixed_data3.jsonl', 'fixed_data3.jsonl')
-
-fine_tune_gpt2("chatA", "C:\multim\\fixed_data3.jsonl", "chatA")
 
 fine_tune_gpt2("chatA", "C:\multim\\textbot.py", "chatA")
-
-
+fine_tune_gpt2("chatA", "C:\multim\\math.txt", "chatA")
+fine_tune_gpt2("chatA", "C:\multim\\fixed_data3.jsonl", "chatA")
 #fine_tune_gpt2("chatA", "C:\multim\\result.json", "chatA") #telegram messages
 
 
